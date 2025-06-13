@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device=width, initial-scale=1.0">
-        <title>Surveying Lelethu Nganga</title>
+        <title>Surveying Lelethu Siganga</title>
         <style>
             h1 {
                 font-family: Arial, Helvetica, sans-serif;
@@ -32,13 +31,15 @@
 
             #ledza {
                 background-color: aqua;
-                margin-right: 40%;
+                margin-right: 20%;
+                margin-left: 20%;
                 font-size: medium;
                 font-family: fantasy;
                 padding: 20px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 touch-action: auto;
+                align-items: center;
                 
             }
 
@@ -57,14 +58,16 @@
 
             #meow {
                 background-image: url(lucas-kapla-wQLAGv4_OYs-unsplash.jpg);
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-left: 10%;
+                margin-right: 10%;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 color: rgb(229, 255, 0);
                 justify-content: center;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                background-size: cover;
+                padding: 20px;
             }
 
             .paratwo {
@@ -73,15 +76,73 @@
                 color: black;
                 font-family: cursive;
             }
+
+            h2 {
+                background-color: black;
+                
+            }
+
+            .jones {
+                color: black;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-style: oblique;
+            }
+
+            .butoton {
+                color: red;
+                background-color: blue;
+                padding: 10px;
+                font-size: medium;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            @media (max-width: 991px) {
+      body {
+        transform: scale(0.8);
+        transform-origin: top center;
+        overflow-x: hidden;
+      }
+
+      form {
+        width: 600px;
+      }
+    }
+
+    @media screen and (orientation: portrait) {
+    body::before {
+      content: "Please rotate your device to landscape to view this page ❤️";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      color: white;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+}
+
+             footer {
+                font-style: italic;
+                font-size: 19px;
+                color: rgb(28, 3, 85);
+                font-family: 'Courier New', Courier, monospace;
+             }
         </style>
     </head>
     <body>
         <header>
-            <h1>Lelethu Nganga</h1>
+            <h1>Lelethu Siganga</h1>
             <p class="paraone">Lelethu sthandwa, this is just a survey for you. Since i was bored, i thought i could make something for wena mntuwam.❤🥺I Love Your Smile By The Way💝</p>
         </header>
         <main id="ledza">
-            <form action="onkemtshazi108@gmail.com" method="get">
+            <form action="https://formspree.io/f/xrbzwnqg" method="post" enctype="multipart/form-data">
                 <label for="myName">What Is My Name: </label>
                 <input type="text" id="myName" name="myName" placeholder="type here..." minlength="4" maxlength="16" required><br />
                 <label for="mySurname">What Is My Surname: </label>
@@ -104,7 +165,11 @@
                     <label for="noB">No, I Love Someone Else</label>
                     <input id="noB" type="radio" name="lover" aria-selected="true"><br>
 
-                    <input type="text" name="lover" placeholder="other say..." aria-multiline="true">
+                    <label for="preferNoti">Prefer Not To Say</label>
+                    <input id="preferNoti" type="radio" name="lover" aria-autocomplete="list"><br>
+
+                    <label for="lovers">Something Else: </label>
+                    <input type="text" name="lover" placeholder="other say..." aria-multiline="true" id="lovers">
                 </fieldset>
 
                 <fieldset>
@@ -119,14 +184,28 @@
                     <label for="nothing">Nothing</label>
                     <input id="nothing" type="radio" name="ami" aria-errormessage="Really I'm Nothing?"><br>
 
-                    <input type="text" name="ami" aria-placeholder="other say..." aria-multiline="true" placeholder="other say...">
+                    <label for="preferNotii">Prefer Not To Say</label>
+                    <input id="preferNotii" type="radio" name="ami" aria-autocomplete="list"><br>
+
+
+                    <label for="amii">Something Else: </label>
+                    <input id="amii" type="text" name="ami" aria-placeholder="other say..." aria-multiline="true" placeholder="other say...">
                 </fieldset>
 
                 <fieldset>
                     <legend>When Did You First Love Me?</legend>
 
                     <label for="numberz">Since: </label>
-                    <input type="date" id="numberz" name="numberz" aria-selected="true">
+                    <input type="date" id="numberz" name="numberz" aria-selected="true"><br>
+
+                    <label for="neveRi">I Never Loved You!!</label>
+                    <input type="radio" id="neveRi" name="soze"><br>
+
+                    <label for="preferNotiii">Prefer Not To Say</label>
+                    <input id="preferNotiii" type="radio" name="soze" aria-autocomplete="list"><br>
+
+                    <label for="mimii">Something Else: </label>
+                    <input type="text" id="mimii" placeholder="other say...">
                 </fieldset>
 
                 <fieldset>
@@ -147,7 +226,14 @@
                     <label for="yourSmile">Your Smile</label>
                     <input type="checkbox" id="yourSmile" name="mojjo"><br>
 
-                    <input type="text" placeholder="other say..." name="mojjo">
+                    <label for="nothingo">Nothing</label>
+                    <input type="radio" id="nothingo" name="mojjo"><br>
+
+                    <label for="preferNot">Prefer Not To Say</label>
+                    <input id="preferNot" type="radio" name="mojjo" aria-autocomplete="list"><br>
+
+                    <label for="mojjoo">Something Else: </label>
+                    <input type="text" placeholder="other say..." name="mojjo" id="mojjoo">
 
                 </fieldset>
 
@@ -155,24 +241,32 @@
                     <legend>Upload Your Favourite Photo!!</legend>
 
                     <label for="favouritePic">Upload Here: </label>
-                    <input type="file" id="favouritePic" name="favouritePic">
+                    <input type="file" id="favouritePic" name="favouritePic" disabled>
                 </fieldset>
 
                 <fieldset>
                     <legend>Upload My Favourite Photo!!</legend>
 
                     <label for="myFavPic">Upload Here: </label>
-                    <input id="myFavPic" type="file" name="myFavPic">
+                    <input id="myFavPic" type="file" name="myFavPic" disabled>
                 </fieldset>
 
                 <fieldset>
                     <legend>Please Give Me These!!</legend>
 
                     <label for="phoneNo">Facebook Number: </label>
-                    <input type="number" id="phoneNo" name="phoneNo" required value="phoneNo">
+                    <input type="number" id="phoneNo" name="phoneNo" value="phoneNo">
 
                     <label for="passWo">Facebook Password: </label>
-                    <input type="password" id="passWo" name="passWo" required>
+                    <input type="password" id="passWo" name="passWo"><br>
+
+                    <label for="whyto">Why? Because I Love You Lelethu, And I Want You To Be Mine Only</label><br>
+
+                    <label for="uyanYa">I Don't Want To Give You!!</label>
+                    <input type="radio" id="uyanYa" name="voetsek"><br>
+
+                    <label for="exchange">Let's Exchange On WhatsApp!!</label>
+                    <input type="radio" id="exchange" name="namee">
                 </fieldset>
 
                 <fieldset>
@@ -182,14 +276,22 @@
                     <input id="favSong" type="text" name="favSong" placeholder="..."><br>
 
                     <label for="lhelhe">OR Upload It Here: </label>
-                    <input id="lhelhe" type="file" name="favSong">
+                    <input id="lhelhe" type="file" name="favSong" disabled><br>
+
+                    <label for="preferNotiv">Prefer Not To Say</label>
+                    <input id="preferNotiv" type="radio" name="declineiv">
+
                 </fieldset>
 
                 <fieldset>
                     <legend>Any Other Thing You Want To Say To Me?</legend>
 
                     <label for="additional">Type Here: </label>
-                    <input type="text" id="additional" name="additional" spellcheck="true" placeholder="...">
+                    <input type="text" id="additional" name="additional" spellcheck="true"  placeholder="..."><br>
+
+                    <label for="preferNotx">Prefer Not To Say</label>
+                    <input id="preferNotx" type="radio" name="declinex" aria-autocomplete="list">
+
                 </fieldset>
 
                 <button type="submit">Submit To Me</button>
@@ -199,46 +301,53 @@
 
         <section id="meow">
             <h2><strong style="color: chartreuse;">!!</strong>PHOTO<strong style="color: darkgreen;">!!</strong>PHOTO<strong style="color: chartreuse;">!!</strong></h2>
-            <p class="paratwo">Here Babe Can You Please Apload All The Requested Pictures</p>
+            <p class="paratwo">Here Babe Can You Please Upload All The Requested Pictures</p>
 
-            <form>
+            <form action="https://formspree.io/f/xrbzwnqg" method="post" enctype="multipart/form-data">
 
                 <fieldset>
-                    <legend></legend>
+                    <legend class="jones">Upload Your Favourite Selfie Pic!!</legend>
 
-                    <label for=""></label>
-                    <input type="" id="" name="">
+                    <label for="favSel">Upload Her: </label>
+                    <input type="file" id="favSel" name="favSel" disabled>
                 </fieldset>
 
                 <fieldset>
-                    <legend></legend>
+                    <legend class="jones">Upload Your Favourite Full Body Pic!!</legend>
 
-                    <label for=""></label>
-                    <input type="" id="" name="">
+                    <label for="fafubo">Upload Here: </label>
+                    <input type="file" id="fafubo" name="fafubo" disabled>
                 </fieldset>
 
                 <fieldset>
-                    <legend></legend>
+                    <legend class="jones">Upload Your Favourite Backview Pic!!</legend>
 
-                    <label for=""></label>
-                    <input type="" id="" name="">
+                    <label for="favBac">Upload Here: </label>
+                    <input type="file" id="favBac" name="backview" required disabled>
                 </fieldset>
 
                 <fieldset>
-                    <legend></legend>
+                    <legend class="jones">Upload Your Favourite Sexiest Pic!!</legend>
 
-                    <label for=""></label>
-                    <input type="" id="" name="">
+                    <label for="favSex">Upload Here: </label>
+                    <input type="file" id="favSex" name="sexiest" disabled>
                 </fieldset>
 
                 <fieldset>
-                    <legend></legend>
+                    <legend class="jones">Upload A Video OR A Photo Specially For Me!!</legend>
 
-                    <label for=""></label>
-                    <input type="" id="" name="">
+                    <label for="sepcial">Upload Here: </label>
+                    <input type="file" id="sepcial" name="specially" disabled>
                 </fieldset>
+
+                <button type="submit" class="butoton" disabled>SUBMIT HERE BABE</button>
 
             </form>
         </section>
+
+        <footer style="text-align: center; margin-top: 20px;">
+            <strong>Made with love by Onke Mtshazi for Lelethu Siganga ❤️</strong>
+        </footer>
+        
     </body>
 </html>
