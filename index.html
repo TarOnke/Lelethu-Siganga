@@ -138,6 +138,22 @@
         </style>
     </head>
     <body>
+        <script>
+  // Prompt for login when page loads
+  window.onload = function () {
+    const username = prompt("Enter Username:");
+    const password = prompt("Enter Password:");
+
+    if (username === "Lelethu" && password === "tar_onke") {
+      alert("Molo Baby, Please send the requested pictures on WhatsApp");
+    } else {
+      alert("Access Denied! This survey is only for Lelethu.");
+      document.body.innerHTML = "<h1 style='color:red;text-align:center;'>Access Denied ❌</h1>";
+    }
+  };
+</script>
+
+        
         <header>
             <h1>
                 <img src="IMG-20250531-WA0008.jpg" alt="Site Logo" style="height:40px;vertical-align:middle;margin-right:10px;">
